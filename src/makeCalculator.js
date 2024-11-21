@@ -19,7 +19,9 @@ function makeCalculator() {
       calculator.result *= number;
     },
     divide: (number) => {
-      calculator.result /= number;
+      if (number < 0 || number > 0) {
+        calculator.result /= number;
+      }
     },
     reset: () => {
       calculator.result = 0;
